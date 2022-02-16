@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+.inner-width {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  padding: 30px 0;
+  z-index: 999;
+  transition: 0.3s linear;
+}
+.navbar .inner-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .inner-width .logo {
+  width: 44px;
+  height: 32px;
+  background: url(../images/white-logo.png) 0 / contain;
+}
+.navbar .inner-width .menu-toggler {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+.navbar .inner-width .menu-toggler span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.3s linear;
+}
+.navbar .inner-width .navbar-menu a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: 0.2s linear;
+}
+.navbar .inner-width .navbar-menu a:hover {
+  color: #48dbfd !important;
+}
+.sticky {
+  background-color: #fff;
+  padding: 18px 0;
+}
+.sticky .inner-width .logo {
+  background: url(../images/black-logo.png) 0 / contain;
+}
+.sticky .inner-width .navbar-menu a {
+  color: #111;
+}
+#home {
+  height: 100vh;
+  min-height: 500px;
+  background: url(../images/30157.jpg) no-repeat fixed center / cover;
+}
+#home .inner-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+#home .inner-width .content {
+  width: 100%;
+  color: #fff;
+}
+#home .inner-width .content h1 {
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+#home .inner-width .content h1::after {
+  content: " Yuan Fan";
+  animation: textanim 12s linear infinite;
+}
+#home .inner-width .content .sm a {
+  color: #fff;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: 0.2s linear;
+}
+#home .inner-width .content .sm a:hover {
+  color: #48dbfd;
+}
+#home .inner-width .content .button {
+  margin-top: 60px;
+}
+#home .inner-width .content .button a {
+  display: inline-block;
+  margin: 15px 30px;
+  color: #48dbfd;
+  font-size: 15px;
+  font-weight: 500px;
+  width: 180px;
+  border: 1px solid;
+  padding: 14px 0;
+  border-radius: 6px;
+  transition: 0.2s linear;
+}
+#home .inner-width .content .button a:hover,
+#home .inner-width .content .button a:nth-child(2) {
+  background-color: #48dbfd;
+  color: #fff;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 80px;
+  background-color: #353b48;
+}
+footer p {
+  margin-bottom: 20px;
+  color: #fff;
+}
+@keyframes textanim {
+  25% {
+    content: " Noob";
+  }
+  50% {
+    content: " A Developer";
+  }
+  70% {
+    content: " A MC Player";
+  }
+}
+@media screen and (max-width: 980px) {
+  .navbar .inner-width .menu-toggler {
+    display: block;
+  }
+  .navbar .inner-width .menu-toggler.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .navbar .inner-width .menu-toggler.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .inner-width .menu-toggler.active span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+  .navbar .inner-width .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    background-color: #353b48;
+    transition: 0.3s linear;
+  }
+  .navbar .inner-width .navbar-menu.active {
+    right: 0;
+  }
+  .navbar .inner-width .navbar-menu a {
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  .sticky .inner-width .navbar-menu {
+    background-color: #f1f1f1;
+  }
+}
